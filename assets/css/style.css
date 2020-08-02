@@ -15,7 +15,7 @@ body {
     width: 180px;
     height: 180px;
     position: relative;
-    left: -4px;
+    left: -10px;
     opacity: 0;
     transform: translateY(200px);
 }
