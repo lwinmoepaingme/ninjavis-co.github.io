@@ -21,7 +21,7 @@ $(document).ready(function () {
                 return
             }
 
-            $('#animatedText').css('padding-left', '6rem');
+            $('#animatedText').css('padding-left', '7rem');
         }
     });
     
