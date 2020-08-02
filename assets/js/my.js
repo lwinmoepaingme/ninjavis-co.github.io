@@ -3,7 +3,7 @@ $(document).ready(function () {
     anime({
         targets: '#Logo',
         delay: 1000,
-        duration: 2000,
+        duration: 1500,
         easing: 'easeOutBack',
         opacity: 1,
         translateY: [100, 0]
@@ -13,7 +13,7 @@ $(document).ready(function () {
         easing: 'easeOutBack',
         targets: '.text',
         delay: function(el, i) { return i * 500 },
-        duration: 1500,
+        duration: 1000,
         begin: () => {
             var width = window.innerWidth;
             if(width <= 330) {
@@ -50,6 +50,15 @@ $(document).ready(function () {
             targets: ['#mis', '#sion'],
             delay: function(el, i) { return 0 },
             opacity: 0,
+            complete: function () {
+                anime({
+                    targets: '#Logo',
+                    translateY: [0, -20],
+                    duration: 500,
+                    easing: 'easeOutBack',
+                    direction: 'alternate',
+                })
+            }
         })
         .add({
             targets: ['#service'],
@@ -88,7 +97,14 @@ $(document).ready(function () {
                         }, 1000);
                        
                     }, 1000)
-                    
+
+                    anime({
+                        targets: '#Logo',
+                        translateY: [0, -20],
+                        scale: [0.9, 1],
+                        duration: 1500,
+                        easing: 'easeOutBack',
+                    })
                 }, 1000)
             }
         });
