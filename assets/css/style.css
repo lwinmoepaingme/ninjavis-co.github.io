@@ -2,7 +2,26 @@ body {
     /* max-width: 1400px; */
     margin: 0 auto;
 }
+/* Buttons */
+.primary-shadow, .primary-shadow.disabled {
+    box-shadow: 0 2px 6px #acb5f6;
+    background-color: #6777ef;
+    border-color: #6777ef;
+}
+/* Fonts */
+.recFont {
+    font-family: 'Recursive', sans-serif;
+}
 
+.rodiFont {
+    font-family: 'Rowdies', cursive;
+}
+
+/* Navbar Section */
+
+/* Navbar Section Finished */
+
+/* First Section */
 .firstSection {
     width: 100%;
     height: 100vh;
@@ -10,25 +29,23 @@ body {
     overflow: hidden;
     /* background: red */
 }
-
 .Logo {
     width: 180px;
     height: 180px;
+    margin-bottom: 1rem;
     border-radius: 50%;
     position: relative;
     left: -10px;
     opacity: 0;
     transform: translateY(200px);
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
 }
-
 .img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center center;
 }
-
 .circlePath {
     display: flex;
     flex: 1;
@@ -40,36 +57,99 @@ body {
     /* clip-path: circle(59.6% at 8% 51%); */
    
 }
-
 .circlePath::before {
     content: "";
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background-color: #373B44;  /* fallback for old browsers */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    background: rgb(63,94,251);
     background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
-    /* background-image: url(https://eskipaper.com/images/geometric-wallpaper-13.jpg); */
     filter: grayscale(70%);
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     z-index: -1;
 }
-
-
-
 .circlePath > h2 {
     padding-left: 9rem;
     white-space: nowrap;
     overflow: hidden;
     transition: all .2s linear;
+    margin-bottom: 1rem !important;
 }
-
 .text {
     display: inline-block;
     opacity: 0;
+}
+/* First Section Finished */
+
+#Nav {
+    display: none;
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    /* background: #fff; */
+    justify-content: flex-end;
+    list-style: none;
+    padding: 1rem 2rem;
+}
+
+#Nav li {
+    margin: 0 2rem;
+}
+
+.NavLink {
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.MobileNav {
+    display: block;
+    width: 30px;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 31px;
+    z-index: 2;
+}
+
+.MobileNav svg {
+    cursor: pointer; 
+}
+.MobileNav svg line {
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    stroke-dasharray: 350;
+    stroke-dashoffset: 0;
+}
+.MobileNav svg line:nth-child(3) {
+    stroke-dasharray: 350;
+    stroke-dashoffset: 250; 
+}
+.MobileNav svg:hover line:nth-child(1) {
+    stroke-dasharray: 350;
+    stroke-dashoffset: 250; 
+}
+.MobileNav svg:hover line:nth-child(3) {
+    stroke-dasharray: 350;
+    stroke-dashoffset: 0; 
+}
+
+.NavLink:hover {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+    #Nav {
+        display: flex;
+    }
+
+    .MobileNav {
+        display: none;
+    }
 }

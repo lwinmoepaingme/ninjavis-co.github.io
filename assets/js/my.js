@@ -30,7 +30,7 @@ $(document).ready(function () {
             targets: ['#sion'],
             delay: function(el, i) { return 0 },
             opacity: 1,
-            translateX: '-3rem'
+            translateX: '-3.2rem'
         })
         .add({
             targets: '#vi',
@@ -81,7 +81,7 @@ $(document).ready(function () {
                     $('#sion').css({
                         transition: 'all 0.5s linear',
                         opacity: 1,
-                        transform: `translateX(-3rem)`
+                        transform: `translateX(-3.2rem)`
                     })
 
                     $('#service').css({
@@ -92,7 +92,7 @@ $(document).ready(function () {
                     setTimeout( () => { 
 
                         $('#animatedText').css('opacity', 0)
-                        $('#animatedText').css('padding-left', '1.5rem')
+                        $('#animatedText').css('padding-left', '2.5rem')
 
                         anime({
                             targets: '#Logo',

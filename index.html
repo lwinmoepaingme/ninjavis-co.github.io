@@ -6,6 +6,8 @@
     <title>NinjaVis Web And Mobile Service </title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Recursive&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rowdies&amp;display=swap">
     <link rel="shortcut icon" href="image/logo.ico" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -17,14 +19,34 @@
     <meta data-hid="og:image" name="og:image" property="og:image" content="https://ninjavis-co.github.io/image/logo.png">
   </head>
   <body>
-    <!-- What the fuck-->
-    <div class="firstSection">  
-      <div class="circlePath"><img class="Logo" id="Logo" src="/image/ninja-vis-logo.svg" alt="">
-        <h2 class="align-middle text-white" id="animatedText">
-           Ninja <span class="text" id="vi">Vi</span><span class="text" id="mis">Mis</span><span class="text" id="sion">sion</span><span class="text" id="service">Service</span></h2>
+    <div>
+      <ul id="Nav">
+        <li class="rodiFont" id="about"><a class="text-white NavLink" href="#about">About</a></li>
+        <li class="rodiFont" id="ourProcess"><a class="text-white NavLink" href="#ourProcess">Our Process</a></li>
+        <li class="rodiFont" id="contactUs"><a class="text-white NavLink" href="#contactUs">Contact Us</a></li>
+      </ul>
+      <div class="MobileNav" id="MobileNav">
+        <svg id="H-Menu_Bar" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 357.61 225.9">
+          <defs>
+            <style>.H-Menu-cls-1{fill: #fff; stroke: #fff; stroke-linecap: round; stroke-linejoin: round; stroke-width: 20px;}</style>
+          </defs>
+          <title>HumbugurBar</title>
+          <g>
+            <line class="H-Menu-cls-1" x1="10" y1="10" x2="347.61" y2="10"></line>
+            <line class="H-Menu-cls-1" x1="10" y1="112.95" x2="193.8" y2="112.95"></line>
+            <line class="H-Menu-cls-1" x1="10" y1="215.9" x2="347.61" y2="215.9"></line>
+          </g>
+        </svg>
       </div>
     </div>
-    <!-- First Section end  -->
+    <div class="firstSection">  
+      <div class="circlePath"><img class="Logo" id="Logo" src="/image/ninja-vis-logo.svg" alt="">
+        <h2 class="align-middle text-white recFont" id="animatedText">
+           Ninja <span class="text" id="vi">Vi</span><span class="text" id="mis">Mis</span><span class="text" id="sion">sion</span><span class="text" id="service">Service</span></h2>
+        <button class="btn btn-primary btn-sm rounded-pill recFont">
+           See Works</button>
+      </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.0/lib/anime.min.js"></script>
     <script src="assets/js/my.js"></script>
   </body>
