@@ -1,5 +1,12 @@
-$(document).ready(function () {
 
+
+$(document).ready(function () {
+    firstSectionAnimation();
+    navbarControl();
+
+});
+
+function firstSectionAnimation () {
     anime({
         targets: '#Logo',
         delay: 1000,
@@ -112,4 +119,26 @@ $(document).ready(function () {
                 }, 1000)
             }
         });
-});
+}
+
+function navbarControl() {
+    $('#MobileNav').click( function (){
+        anime({
+            targets: '#MobileNavView',
+            delay: 300,
+            duration: 600,
+            easing: 'easeOutQuint',
+            translateX: '0%'
+        })
+    })
+
+    $('#CloseNavbar').click( function (){
+        anime({
+            targets: '#MobileNavView',
+            delay: 300,
+            duration: 600,
+            easing: 'easeOutQuint',
+            translateX: '-100%'
+        })
+    })
+}

@@ -1,2 +1,6 @@
-.MobileNavView
-    
+.MobileNavView#MobileNavView(style="transform: translateX(-100%);")
+    for ctx, id in ctxArray
+        div
+            a(href=`#${id}`, id=`#MobileNavId_${id}`).rodiFont.NavLink= ctx
+    div
+        a(href="#close", id="CloseNavbar").rodiFont.NavLink Close
