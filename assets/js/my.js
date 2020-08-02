@@ -39,6 +39,15 @@ $(document).ready(function () {
         .add({
             targets: '#vi',
             opacity: 0,
+            complete: function () {
+                anime({
+                    targets: '#Logo',
+                    translateY: [0, -20],
+                    duration: 500,
+                    easing: 'easeOutBack',
+                    direction: 'alternate',
+                })
+            }
         })
         .add({
             targets: ['#sion', '#mis'],
@@ -88,6 +97,14 @@ $(document).ready(function () {
 
                         $('#animatedText').css('opacity', 0)
                         $('#animatedText').css('padding-left', '3rem')
+
+                        anime({
+                            targets: '#Logo',
+                            translateY: [0, -20],
+                            duration: 1500,
+                            direction: 'alternate',
+                            easing: 'easeOutBack',
+                        })
                         
                         setTimeout(() => {
                             $('#service').hide();
@@ -95,16 +112,7 @@ $(document).ready(function () {
                                 opacity: 1
                             })
                         }, 1000);
-                       
                     }, 1000)
-
-                    anime({
-                        targets: '#Logo',
-                        translateY: [0, -20],
-                        scale: [0.9, 1],
-                        duration: 1500,
-                        easing: 'easeOutBack',
-                    })
                 }, 1000)
             }
         });
