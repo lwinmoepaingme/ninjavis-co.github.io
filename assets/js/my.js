@@ -1,5 +1,14 @@
 $(document).ready(function () {
 
+    anime({
+        targets: '#Logo',
+        delay: 1000,
+        duration: 2000,
+        easing: 'easeOutBack',
+        opacity: 1,
+        translateY: [100, 0]
+    });
+
     var tl = anime.timeline({
         easing: 'easeOutBack',
         targets: '.text',
