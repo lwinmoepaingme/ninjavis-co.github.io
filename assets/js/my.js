@@ -6,7 +6,13 @@ $(document).ready(function () {
         delay: function(el, i) { return i * 500 },
         duration: 1500,
         begin: () => {
-            $('#animatedText').css('padding-left', '4rem')
+            var width = window.innerWidth;
+            if(width <= 330) {
+                $('#animatedText').css('padding-left', '4rem');
+                return
+            }
+
+            $('#animatedText').css('padding-left', '6rem');
         }
     });
     
