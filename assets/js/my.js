@@ -96,7 +96,7 @@ $(document).ready(function () {
                     setTimeout( () => { 
 
                         $('#animatedText').css('opacity', 0)
-                        $('#animatedText').css('padding-left', '3rem')
+                        $('#animatedText').css('padding-left', '1.5rem')
 
                         anime({
                             targets: '#Logo',
