@@ -16,12 +16,8 @@ $(document).ready(function () {
         duration: 1000,
         begin: () => {
             var width = window.innerWidth;
-            if(width <= 330) {
-                $('#animatedText').css('padding-left', '4rem');
-                return
-            }
 
-            $('#animatedText').css('padding-left', '7rem');
+            $('#animatedText').css('padding-left', '8rem');
         }
     });
     
