@@ -1,7 +1,6 @@
 body {
-    /* max-width: 1400px; */
+    max-width: 1400px;
     margin: 0 auto;
-    background-color: #fff;
 }
 /* Buttons */
 .primary-shadow, .primary-shadow.disabled {
@@ -98,6 +97,7 @@ body {
     width: 100%;
     height: 100vh;
     min-height: 500px;
+    max-height: 800px;
     overflow: hidden;
     /* background: red */
 }
@@ -183,3 +183,74 @@ body {
     display: block;
 }
 /* Second Section Finished */
+
+/* Image Phone Row */
+.imgRow {
+    display: flex;
+    flex-direction: column;
+    background-color: #6777ef;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    margin-bottom: 2rem;
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+}
+
+.imgRow > img {
+    width:  340px;
+    padding: 0 1rem;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.imgRow > .textRow {
+    color: #dfdfdf;
+    z-index: 1;
+    text-align: center;
+    margin: 0 2rem;
+}
+@media screen and (max-width: 599px) {
+    .imgRow > .textRow.left {
+        order: 2
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .imgRow {
+        flex-direction: row;
+    }
+
+    .imgRow > img {
+        margin: 0;
+    }
+
+    .imgRow > .textRow {
+        flex: 1;
+        text-align: left;
+        margin: 0 3rem;
+    }
+
+    .imgRow:before, .imgRow:after {
+        content: "";
+        height: 90px;
+        background: #fff;
+        width: 100%;
+        display: block;
+        top: 0;
+        position: absolute;
+        left: 0;
+    }
+    
+    .imgRow:after {
+        bottom: 0;
+        position: absolute;
+        left: 0;
+        top: auto;
+    }
+}
+
+
+/* Image Phone Row Finished*/

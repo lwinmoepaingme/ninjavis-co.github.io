@@ -4,6 +4,7 @@ $(document).ready(function () {
     navbarControl();
     firstSectionAnimation();
     secondSectionAnimation();
+    phoneAnimation();
 });
 
 function firstSectionAnimation () {
@@ -169,4 +170,21 @@ function secondSectionAnimation () {
     })
 
     
+}
+
+function phoneAnimation () {
+    $('.imgRow > img').each(function (v) {
+        $(this).hover(function () {
+            anime({
+                targets: this,
+                translateY: [0, -10]
+            })
+        },
+        function () {
+            anime({
+                targets: this,
+                translateY: [-10, 0]
+            })
+        })
+    })
 }
