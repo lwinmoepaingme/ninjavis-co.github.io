@@ -5,6 +5,7 @@ $(document).ready(function () {
     firstSectionAnimation();
     secondSectionAnimation();
     phoneAnimation();
+    activitesAnimation();
 });
 
 function firstSectionAnimation () {
@@ -127,7 +128,7 @@ function navbarControl() {
         anime({
             targets: '#MobileNavView',
             delay: 300,
-            duration: 600,
+            duration: 700,
             easing: 'easeOutQuint',
             translateX: '0%'
         })
@@ -172,19 +173,66 @@ function secondSectionAnimation () {
     
 }
 
-function phoneAnimation () {
-    $('.imgRow > img').each(function (v) {
+function phoneAnimation () { 
+
+    ScrollOut({
+        targets: "#leftMobile",
+        offset: 600,
+        onShown: function(element, ctx, scrollingElement) {
+            anime({ 
+                targets: '#leftMobile > img',
+                translateY: [0, -45],
+                opacity: 1,
+                duration: 2000,
+            })
+        },
+        onHidden: function(element, ctx, scrollingElement) {
+            anime({
+                targets: '#leftMobile > img',
+                translateY: [-45, 0],
+                opacity: 0,
+                duration: 2000
+            })
+        }
+    });
+
+    ScrollOut({
+        targets: "#rightMobile",
+        offset: 700,
+        onShown: function(element, ctx, scrollingElement) {
+            anime({
+                targets: '#rightMobile  > img',
+                translateY: [0, -45],
+                opacity: 1,
+                duration: 2000
+            })
+        },
+        onHidden: function(element, ctx, scrollingElement) {
+            anime({
+                targets: '#rightMobile >  img',
+                translateY: [-45, 0],
+                opacity: 0,
+                duration: 2000
+            })
+        }
+    });
+}
+
+function activitesAnimation () {
+    $('.acitivitesImage').each(function (v) {
         $(this).hover(function () {
             anime({
                 targets: this,
-                translateY: [0, -10]
+                scale: 1.05,
+                translateY: [0, -8]
             })
         },
         function () {
             anime({
                 targets: this,
-                translateY: [-10, 0]
+                scale: 1,
+                translateY: [-8, 0]
             })
         })
-    })
+    })  
 }
