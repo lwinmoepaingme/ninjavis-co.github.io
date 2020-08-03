@@ -1,0 +1,11 @@
+div#Second_Section.Second_Section
+    - const ourProcess = [{img: "/image/daily.svg",title: "Daily Standup",description: "Analytic inhousing project and caring our clinet."},{img: "/image/meeting.svg",title: "Sync Meeting",description: "We schedule meeting weekly or monthly."},{img: "/image/maintenance.svg",title: "Maintenance",description: "Not half by half, heart by heart Maintenance is ours."},]
+    #SecondCard.SecondCard
+        .container-fluid
+            .row
+                for val in ourProcess
+                    .col-12.col-md-4
+                        .myCard.text-center
+                            img.smSVG(src=val.img, alt="")
+                            h5.rodiFont.pt-4= val.title
+                            p= val.description

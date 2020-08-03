@@ -1,6 +1,7 @@
 body {
     /* max-width: 1400px; */
     margin: 0 auto;
+    background-color: #fff;
 }
 /* Buttons */
 .primary-shadow, .primary-shadow.disabled {
@@ -12,13 +13,84 @@ body {
 .recFont {
     font-family: 'Recursive', sans-serif;
 }
-
 .rodiFont {
     font-family: 'Rowdies', cursive;
 }
 
 /* Navbar Section */
+#Nav {
+    display: none;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+    /* background: #fff; */
+    justify-content: flex-end;
+    list-style: none;
+    padding: 1rem 2rem;
+}
+#Nav li {
+    margin: 0 2rem;
+}
+.NavLink {
+    border-bottom: 2px solid #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+.MobileNav {
+    display: block;
+    width: 30px;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    width: 31px;
+    z-index: 2;
+}
+.MobileNav svg {
+    cursor: pointer; 
+}
+.MobileNav svg line {
+    transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    stroke-dasharray: 350;
+    stroke-dashoffset: 0;
+}
+.MobileNav svg line:nth-child(3) {
+    stroke-dasharray: 350;
+    stroke-dashoffset: 250; 
+}
+.MobileNav svg:hover line:nth-child(1) {
+    stroke-dasharray: 350;
+    stroke-dashoffset: 250; 
+}
+.MobileNav svg:hover line:nth-child(3) {
+    stroke-dasharray: 350;
+    stroke-dashoffset: 0; 
+}
+.NavLink:hover {
+    text-decoration: none;
+}
+@media screen and (min-width: 600px) {
+    #Nav {
+        display: flex;
+    }
 
+    .MobileNav {
+        display: none;
+    }
+}
+.MobileNavView {
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fff;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
 /* Navbar Section Finished */
 
 /* First Section */
@@ -85,84 +157,29 @@ body {
 }
 /* First Section Finished */
 
-#Nav {
-    display: none;
-    position: fixed;
-    width: 100%;
-    z-index: 2;
-    /* background: #fff; */
-    justify-content: flex-end;
-    list-style: none;
-    padding: 1rem 2rem;
+/* Second Section */
+.SecondCard {
+    min-width: 300px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 2rem;
+    border-radius: .5rem;
 }
 
-#Nav li {
-    margin: 0 2rem;
+.myCard {
+    max-width: 280px;
+    margin: 1rem auto;
+    min-height: 200px;
+    padding: 1rem;
+
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow:  0px 2px 3px #d0d0d0;
 }
 
-.NavLink {
-    border-bottom: 2px solid #fff;
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.MobileNav {
+.smSVG {
+    width: 55px;
+    margin: 0 auto;
     display: block;
-    width: 30px;
-    position: absolute;
-    top: 1rem;
-    left: 1rem;
-    width: 31px;
-    z-index: 2;
 }
-
-.MobileNav svg {
-    cursor: pointer; 
-}
-.MobileNav svg line {
-    transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    stroke-dasharray: 350;
-    stroke-dashoffset: 0;
-}
-.MobileNav svg line:nth-child(3) {
-    stroke-dasharray: 350;
-    stroke-dashoffset: 250; 
-}
-.MobileNav svg:hover line:nth-child(1) {
-    stroke-dasharray: 350;
-    stroke-dashoffset: 250; 
-}
-.MobileNav svg:hover line:nth-child(3) {
-    stroke-dasharray: 350;
-    stroke-dashoffset: 0; 
-}
-
-.NavLink:hover {
-    text-decoration: none;
-}
-
-@media screen and (min-width: 600px) {
-    #Nav {
-        display: flex;
-    }
-
-    .MobileNav {
-        display: none;
-    }
-}
-
-/* MobileNavView */
-.MobileNavView {
-    position: fixed;
-    width: 100%;
-    min-height: 100vh;
-    background-color: #fff;
-    z-index: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
+/* Second Section Finished */

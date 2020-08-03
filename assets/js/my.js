@@ -1,9 +1,9 @@
 
 
 $(document).ready(function () {
-    firstSectionAnimation();
     navbarControl();
-
+    firstSectionAnimation();
+    secondSectionAnimation();
 });
 
 function firstSectionAnimation () {
@@ -22,7 +22,7 @@ function firstSectionAnimation () {
         delay: function(el, i) { return i * 500 },
         duration: 1000,
         begin: () => {
-            var width = window.innerWidth;
+            // var width = window.innerWidth;
 
             $('#animatedText').css('padding-left', '8rem');
         }
@@ -141,4 +141,32 @@ function navbarControl() {
             translateX: '-100%'
         })
     })
+}
+
+function secondSectionAnimation () {
+    anime({
+        targets: '.myCard',
+        delay: function(el, i) { return i * 500 },
+        duration: 1200,
+        easing: 'easeOutQuint',
+        translateY: [0, -100],
+        complete: function () {
+            $('.myCard').each(function (v) {
+                $(this).hover(function () {
+                    anime({
+                        targets: this,
+                        scale: [1, 1.05]
+                    })
+                },
+                function () {
+                    anime({
+                        targets: this,
+                        scale: [1.05, 1]
+                    })
+                })
+            })
+        }
+    })
+
+    
 }

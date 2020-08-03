@@ -1,6 +1,5 @@
 div
     ul#Nav
-        - const ctxArray = {about: "About", ourProcess: "Our Process", contactUs: "Contact Us" }
         for ctx, id in ctxArray
             li.rodiFont&attributes({id})
                 a(href=`#${id}`).text-white.NavLink= ctx
